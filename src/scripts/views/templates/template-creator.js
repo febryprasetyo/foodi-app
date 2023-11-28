@@ -1,34 +1,32 @@
-import resto from '../../../public/data/DATA.json';
-import { getRestaurants } from '../../data/restaurant-data';
+/* eslint-disable indent */
+import CONFIG from '../../global/config';
 
-const createRestoItemTemplate = (getRestaurants) => `
+const createRestoItemTemplate = (resto) => `
   <div class="col" id="resto-item">
       <div class="card">
           <div class="card-img">
               <div class="city-label">
                   <span class="city-label-text">
-                      Kota ${restaurants.city}
+                      Kota ${resto.city}
                   </span>
               </div>
               <img class="lazyload" data-src="${
-                restaurants.pictureId
-                  ? CONFIG.BASE_IMAGE_URL + restaurants.pictureId
+                resto.pictureId
+                  ? CONFIG.BASE_IMAGE_URL + resto.pictureId
                   : 'images/heros/hero-image_2.jpg'
               }" alt="${resto.name}">
           </div>
           <div class="card-body">
               <div class="rating">
                   <i class="fas fa-star"></i>
-                  <span>${restaurants.rating}</span>
+                  <span>${resto.rating}</span>
               </div>
               <h3 class="card-title" id="resto-title">
                   <a href="./#/detail/${
-                    restaurants.id
-                  }" title="Link ke halaman detail makanan">${
-  restaurants.name
-}</a>
+                    resto.id
+                  }" title="Link ke halaman detail makanan">${resto.name}</a>
               </h3>
-              <p class="card-text">${restaurants.description}</p>
+              <p class="card-text">${resto.description}</p>
           </div>
       </div>
   </div>

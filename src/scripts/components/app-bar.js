@@ -25,7 +25,7 @@ class AppBar extends HTMLElement {
       </a>
     </li>
     <li>
-      <a href='#' title='Link ke halaman favorite'>
+      <a href='#/favorite' title='Link ke halaman favorite'>
         Favorite
       </a>
     </li>

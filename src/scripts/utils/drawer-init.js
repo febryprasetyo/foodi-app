@@ -39,7 +39,7 @@ const DrawerInit = {
     event.stopPropagation();
     const { scrollY } = window;
     if (scrollY < 20) {
-      drawer.style.backgroundColor = 'transparent';
+      drawer.style.backgroundColor = '#FBFBFBE8';
     } else {
       drawer.style.backgroundColor = '#FBFBFB';
     }
